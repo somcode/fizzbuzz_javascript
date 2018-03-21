@@ -1,18 +1,34 @@
-describe('Fizzbuzz', function() {
-  var javabuzz;
+describe('FizzBuzz', function() {
+  var fizzBuzz;
   beforeEach(function() {
-    fizzbuzz = new fizzBuzz();
+    fizzBuzz = new FizzBuzz();
   });
 
   describe('knows when a number is', function() {
     it('divisible by 3', function() {
-      expect(fizzbuzz.isDIvisibleByThree(3)).toBe(true);
+      expect(fizzBuzz.isDivisibleByThree(3)).toBe(true);
+    });
+
+    it('divisible by 5', function() {
+      expect(fizzBuzz.isDivisibleByFive(5)).toBe(true);
+    });
+
+    it('divisible by 15', function() {
+      expect(fizzBuzz.isDivisibleByFifteen(15)).toBe(true);
     });
   });
 
   describe('knows when a number is NOT', function() {
     it('divisible by 3', function() {
-      expect(fizzbuzz.isDIvisibleByThree(1)).toBe(false);
+      expect(fizzBuzz.isDivisibleByThree(1)).toBe(false);
+    });
+
+    it('divisible by 5', function() {
+      expect(fizzBuzz.isDivisibleByFive(1)).toBe(false);
+    });
+
+    it('divisible by 15', function() {
+      expect(fizzBuzz.isDivisibleByFifteen(1)).toBe(false);
     });
   });
 });
